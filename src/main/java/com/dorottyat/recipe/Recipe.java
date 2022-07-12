@@ -19,6 +19,9 @@ public class Recipe {
     private ArrayList<String> directions;
     private String note;
 
+    public Recipe() {
+    }
+
     public Recipe(String name, int serving, int time, ArrayList<String> ingredients, ArrayList<String> directions, String note) {
         this.name = name;
         this.serving = serving;
@@ -26,6 +29,14 @@ public class Recipe {
         this.ingredients = ingredients;
         this.directions = directions;
         this.note = note;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
