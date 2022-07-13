@@ -1,10 +1,9 @@
 package com.dorottyat.recipe;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
 public class RecipeController {
@@ -15,6 +14,11 @@ public class RecipeController {
     @GetMapping(path = "/recipes")
     public Iterable<Recipe> getAllRecipes() {
         return recipeRepository.findAll();
+    }
+
+    @GetMapping(path = "/recipes/{id}")
+    public Optional<Recipe> getRecipeById(@PathVariable int id) {
+        return recipeRepository.findById(id);
     }
 
     @PostMapping(path = "/recipes")
