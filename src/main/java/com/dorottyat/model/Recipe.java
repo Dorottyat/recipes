@@ -1,4 +1,4 @@
-package com.dorottyat.recipe;
+package com.dorottyat.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

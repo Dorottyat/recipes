@@ -1,5 +1,7 @@
-package com.dorottyat.recipe;
+package com.dorottyat.controller;
 
+import com.dorottyat.model.Recipe;
+import com.dorottyat.repository.RecipeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

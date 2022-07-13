@@ -1,5 +1,6 @@
-package com.dorottyat.recipe;
+package com.dorottyat.repository;
 
+import com.dorottyat.model.Recipe;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
