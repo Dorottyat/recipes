@@ -13,19 +13,22 @@ public class RecipeController {
     @Autowired
     private RecipeRepository recipeRepository;
 
+    @CrossOrigin(origins = "*")
     @GetMapping(path = "/recipes")
     public Iterable<Recipe> getAllRecipes() {
         return recipeRepository.findAll();
     }
 
-    @GetMapping(path = "/recipes/{id}")
-    public Optional<Recipe> getRecipeById(@PathVariable int id) {
-        return recipeRepository.findById(id);
-    }
-
+    @CrossOrigin(origins = "*")
     @PostMapping(path = "/recipes")
     public void postRecipe(@RequestBody Recipe recipe) {
         recipeRepository.save(recipe);
+    }
+
+    @CrossOrigin(origins = "*")
+    @DeleteMapping(path = "/recipes/{id}")
+    public void deleteRecipeById(@PathVariable int id) {
+        recipeRepository.deleteById(id);
     }
 
 }
